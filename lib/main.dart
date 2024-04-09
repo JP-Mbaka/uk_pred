@@ -1,23 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:uk_pred/api.dart';
 import 'package:uk_pred/model.dart';
 import 'package:uk_pred/result.dart';
+import 'package:uk_pred/splashScreen.dart';
 import 'package:uk_pred/variables.dart';
 
 void main() {
-  runApp(MaterialApp(
-    title: 'Ush',
-    debugShowCheckedModeBanner: false,
-    theme: ThemeData(
-      colorScheme: ColorScheme.fromSeed(
-        seedColor: const Color.fromARGB(195, 226, 154, 59),
+  SystemChrome.setSystemUIOverlayStyle(
+    SystemUiOverlayStyle(
+      statusBarColor: const Color.fromARGB(255, 2, 81, 92),
+      // Change this color to your desired foreground color
+    ),
+  );
+  runApp(
+    MaterialApp(
+      title: 'Ush',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color.fromARGB(255, 32, 206, 230),
+        ),
+        useMaterial3: true,
       ),
-      useMaterial3: true,
+      home: SplashScreen(),
     ),
-    home: ResultScreen(
-      resVal: 'tested_positive',
-    ),
-  ));
+  );
 }
 
 class Home extends StatefulWidget {
