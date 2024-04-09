@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:uk_pred/main.dart';
+import 'package:uk_pred/splashScreen.dart';
 
 class ResultScreen extends StatelessWidget {
   ResultScreen({super.key, required this.resVal});
@@ -55,7 +55,7 @@ class ResultScreen extends StatelessWidget {
                 child: ElevatedButton(
                     onPressed: () {
                       Navigator.of(context).pushReplacement(
-                          MaterialPageRoute(builder: (_) => Home()));
+                          MaterialPageRoute(builder: (_) => SplashScreen()));
                     },
                     child: const Icon(Icons.repeat)),
               ),
